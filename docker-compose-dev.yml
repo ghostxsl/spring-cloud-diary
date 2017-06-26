@@ -1,0 +1,30 @@
+version: '3'
+services:
+  eureka-server:
+    build: eureka-server
+    ports:
+      - 8761:8761
+
+  service-dashboard:
+    build: service-dashboard
+    ports:
+      - 7979:7979
+
+  service-history:
+    build: service-history
+    ports:
+      - 8763:8763
+
+  service-user:
+      build: service-user
+      ports:
+        - 8762:8762
+
+  diary-ribbon-ui:
+      build: diary-ribbon-ui
+      ports:
+        - 8079:8079
+
+
+
+

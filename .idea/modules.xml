@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../springclouddiary/diary-eureka/diary-eureka.iml" filepath="$PROJECT_DIR$/../springclouddiary/diary-eureka/diary-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springclouddiary/diary-eureka-service-history/diary-eureka-service-history.iml" filepath="$PROJECT_DIR$/../springclouddiary/diary-eureka-service-history/diary-eureka-service-history.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springclouddiary/diary-eureka-service-user/diary-eureka-service-user.iml" filepath="$PROJECT_DIR$/../springclouddiary/diary-eureka-service-user/diary-eureka-service-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springclouddiary/diary-hystrix-dashboard/diary-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/../springclouddiary/diary-hystrix-dashboard/diary-hystrix-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springclouddiary/diary-ribbon-ui/diary-ribbon-ui.iml" filepath="$PROJECT_DIR$/../springclouddiary/diary-ribbon-ui/diary-ribbon-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springclouddiary/spring-cloud-diary.iml" filepath="$PROJECT_DIR$/../springclouddiary/spring-cloud-diary.iml" />
+    </modules>
+  </component>
+</project>

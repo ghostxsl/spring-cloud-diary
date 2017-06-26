@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap/jquery-2.1.0.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+
+    <script src="angular/angular.min.js"></script>
+
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app="fortunes" ng-controller="pageCon">
+
+<div class="jumbotron container">
+    <h1>Welcome to Diary!</h1>
+</div>
+
+<!-- 登录-->
+<div  ng-show="myVar1"  class="container">
+    <form>
+        <p>账户：<input type="text" ng-model="account" placeholder="账户"></p>
+        <p>密码：<input type="password" ng-model="pass" placeholder="密码"></p>
+        <div ng-show="err"><font color="red">用户名或密码不正确！</font></div>
+    </form>
+
+    <hr>
+    <div>
+    <button class="btn" ng-click="roll()">注册</button>
+    <button class="btn btn-success" ng-click="login(account,pass)">登录</button>
+
+    </div>
+
+</div>
+
+<!-- 注册-->
+<div class="container" ng-show="myVar2" ng-controller="ro">
+    <h3>创建新用户:</h3>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">账户：</label>
+            <div class="col-sm-10">
+                <input type="text" ng-model="userAccount" placeholder="账户">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">密码：</label>
+            <div class="col-sm-10">
+                <input type="password" ng-model="userPassword" placeholder="密码">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">性别：</label>
+            <div class="col-sm-10">
+                <input type="radio"  ng-model="userSex" value="0">女
+                <input type="radio"  ng-model="userSex" value="1">男
+            </div>
+        </div>
+        <div ng-show="myVar4">注册成功！</div>
+        <div ng-show="varRepeat">用户名重复！</div>
+    </form>
+
+    <hr>
+    <button class="btn btn-success" ng-disabled="incomplete" ng-click="enroo(userAccount,userPassword,userSex)">注册</button>
+    <button class="btn" ng-click="re()">返回</button>
+</div>
+
+<!-- 应用-->
+<div class="container" ng-show="myVar3" ng-controller="myNoteCtrl">
+<div>登陆成功！ 账户：{{account}}</div>
+
+<div>
+    <p>文件名：<input type="text" ng-model="name">{{theTime}}</p>
+    <p><textarea ng-model="message" class="text-success" cols="180" rows="10"></textarea></p>
+
+    <p>
+        <button ng-click="save(name,account,message)" class="btn">保存</button>
+        <button ng-click="clear()" class="btn">清除</button>
+    </p>
+
+    <p>剩余字数：<span ng-bind="left()"></span></p>
+</div>
+
+<div>
+    <table class="table table-striped" ng-show="ta">
+        <thead>
+        <tr>
+            <th>文件名</th>
+            <th>日期</th>
+            <th>  </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in history">
+            <td>{{ x.filename }}</td>
+            <td>{{ x.date }}</td>
+            <td><button class="btn" data-toggle="modal" data-target="#myModal" ng-click="lookup(account,x.filename)">查看</button></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-primary btn-lg" ng-click="his(account)">我的历史</button>
+</div>
+
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" ng-repeat="y in res">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">文件名：{{y.filename}}</h4>
+                </div>
+                <div class="modal-body">内容：{{y.usertext}}</div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+</div>
+
+
+</body>
+
+</html>

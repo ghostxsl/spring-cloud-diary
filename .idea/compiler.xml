@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="diary-eureka" />
+        <module name="diary-eureka-service-history" />
+        <module name="diary-eureka-service-user" />
+        <module name="diary-eureka-ui" />
+        <module name="diary-hystrix-dashboard" />
+        <module name="diary-ribbon-ui" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="diary-eureka" target="1.8" />
+      <module name="diary-eureka-service-history" target="1.8" />
+      <module name="diary-eureka-service-user" target="1.8" />
+      <module name="diary-eureka-ui" target="1.8" />
+      <module name="diary-hystrix-dashboard" target="1.8" />
+      <module name="diary-ribbon-ui" target="1.8" />
+      <module name="diary-ui" target="1.8" />
+      <module name="spring-cloud-diary" target="1.8" />
+      <module name="springclouddiary" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

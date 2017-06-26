@@ -1,0 +1,35 @@
+version: '3'
+services:
+  eureka-server:
+    image: diary/diary-eureka
+    restart: always
+    ports:
+      - 8761:8761
+
+  service-dashboard:
+    image: diary/diary-hystrix-dashboard
+    restart: always
+    ports:
+      - 7979:7979
+
+  service-history:
+      image: diary/diary-eureka-service-history
+      restart: always
+      ports:
+        - 8763:8763
+
+  service-user:
+       image: diary/diary-eureka-service-user
+       restart: always
+       ports:
+         - 8762:8762
+
+  diary-ribbon-ui:
+       image: diary/diary-ribbon-ui
+       restart: always
+       ports:
+         - 8079:8079
+
+
+
+
